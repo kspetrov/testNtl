@@ -1,4 +1,4 @@
-import netlifyAuth from "../../auth/netlifyAuth.js";
+import netlifyAuth from "../auth/netlifyAuth.js";
 import { useEffect, useState } from "react";
 
 export default function Index() {
