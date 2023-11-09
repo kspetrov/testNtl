@@ -1,5 +1,7 @@
 import netlifyAuth from "../auth/netlifyAuth.js";
 import { useEffect, useState } from "react";
+import Head from "next/head";
+import Script from "next/script";
 
 export default function Index() {
   const [loggedIn, setLoggedIn] = useState(null);
@@ -11,5 +13,13 @@ export default function Index() {
       setUser(usr);
     });
   }, []);
-  return <h1>BOOP</h1>;
+  return (
+    <div>
+      <Head>
+        <title>WkHelper!</title>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+      </Head>
+      <div></div>
+    </div>
+  );
 }
